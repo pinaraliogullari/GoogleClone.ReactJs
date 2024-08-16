@@ -1,0 +1,22 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "[!g]*/**": true,
+        "g[!o]*/**": true,
+        "go[!o]*/**": true,
+        "goo[!g]*/**": true,
+        "goog[!l]*/**": true,
+        "googl[!e]*/**": true,
+        "google[!-]*/**": true,
+        "google-[!c]*/**": true,
+        "google-c[!l]*/**": true,
+        "google-cl[!o]*/**": true,
+        "google-clo[!n]*/**": true,
+        "google-clon[!e]*/**": true
+    }
+}
