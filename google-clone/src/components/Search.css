@@ -46,3 +46,7 @@
     color:#222;
 
 }
+
+.search-buttonsHidden{
+    display:none !important;
+}
