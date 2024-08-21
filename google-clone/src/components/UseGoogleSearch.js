@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from 'react'
 import { AppContext } from '../Context/AppContext';
+import axios from 'axios';
 import API_KEY from '../keys'
 
 const UseGoogleSearch = () => {
@@ -8,12 +9,21 @@ const UseGoogleSearch = () => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-
+        const getResults = async () => {
+            try {
+                const response = await axios.get(`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${contextAPI}:omuauf_lfve&q=${input}`);
+                setData(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        getResults();
     }, [input]);
-    
     return (
         <div>
-
+            {data && (
+                <pre>{JSON.stringify(data, null, 2)}</pre>
+            )}
         </div>
     )
 }
