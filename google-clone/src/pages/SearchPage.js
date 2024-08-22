@@ -4,6 +4,12 @@ import { AppContext } from '../Context/AppContext';
 import response from '../response';
 import { Link } from 'react-router-dom';
 import Search from '../components/Search';
+import SearchIcon from '@mui/icons-material/Search';
+import DescriptionIcon from '@mui/icons-material/Description';
+import ImageIcon from '@mui/icons-material/Image';
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import RoomIcon from '@mui/icons-material/Room';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 //https://developers.google.com/custom-search/v1/introduction?hl=tr#identify_your_application_to_google_with_api_key
 //https://developers.google.com/custom-search/v1/using_rest?hl=tr
@@ -21,6 +27,42 @@ const SearchPage = () => {
                 </Link>
                 <div className='searchPage-headerBody'>
                     <Search hiddenButtons />
+                    <div className='searchPage-options'>
+                        <div className='searchPage-optionsLeft'>
+                            <div className='searchPage-option'>
+                                <SearchIcon />
+                                <Link to="/all">all</Link>
+                            </div>
+                            <div className='searchPage-option'>
+                                <DescriptionIcon />
+                                <Link to="/news">news</Link>
+                            </div>
+                            <div className='searchPage-option'>
+                                <ImageIcon />
+                                <Link to="/images">images</Link>
+                            </div>
+                            <div className='searchPage-option'>
+                                <LocalOfferIcon />
+                                <Link to="/shopping">shopping</Link>
+                            </div>
+                            <div className='searchPage-option'>
+                                <RoomIcon />
+                                <Link to="/maps">maps</Link>
+                            </div>
+                            <div className='searchPage-option'>
+                                <MoreVertIcon />
+                                <Link to="/more">more</Link>
+                            </div>
+                        </div>
+                        <div className='searchPage-optionsRight'>
+                            <div className='searchPage-option'>
+                                <Link to="/settings">Settings</Link>
+                            </div>
+                            <div className='searchPage-option'>
+                                <Link to="/tools">Tools</Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

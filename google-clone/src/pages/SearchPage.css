@@ -19,3 +19,27 @@
     margin:unset;
     max-width:unset;
 }
+.searchPage-options{
+    display:flex;
+    align-items:center;
+    color:grey;
+}
+.searchPage-optionsLeft,
+.searchPage-optionsRight{
+    display:flex;
+}
+.searchPage-options a,
+.searchPage-optionsRight a{
+    text-decoration:none;
+    color:gray;
+}
+.searchPage-optionsRight{
+    margin-left:80px;
+}
+
+.searchPage-option{
+    margin-right:20px;
+}
+.searchPage-option a{
+    margin-left:5px;
+}
