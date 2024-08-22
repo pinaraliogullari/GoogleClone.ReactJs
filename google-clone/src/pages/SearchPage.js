@@ -17,8 +17,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const SearchPage = () => {
     const context = useContext(AppContext);
-    const dataa = response;
-    console.log(dataa)
+    const responseData = response;
     return (
         <div className='searchPage'>
             <div className='searchPage-header'>
@@ -67,7 +66,9 @@ const SearchPage = () => {
             </div>
 
             <div className='searchPage-results'>
-
+                <p className='searchPage-resultCount'>
+                    About {responseData?.searchInformation.formattedTotalResults} results ({responseData?.searchInformation.formattedSearchTime} seconds) for Tesla
+                </p>
             </div>
         </div>
     )

@@ -6,13 +6,14 @@ import API_KEY from '../keys'
 const UseGoogleSearch = () => {
     const contextAPI = "52cec448d6c3b404f";
     const { input } = useContext(AppContext);
-    const [data, setData] = useState(null);
+    const [result, setResult] = useState(null);
+
 
     useEffect(() => {
         const getResults = async () => {
             try {
                 const response = await axios.get(`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${contextAPI}:omuauf_lfve&q=${input}`);
-                setData(response.data);
+                setResult(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
