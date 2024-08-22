@@ -6,7 +6,7 @@ import API_KEY from '../keys'
 const UseGoogleSearch = () => {
     const contextAPI = "52cec448d6c3b404f";
     const { input } = useContext(AppContext);
-    const [result, setResult] = useState(null);
+    const { setResult, result } = useContext(AppContext);
 
 
     useEffect(() => {
@@ -21,9 +21,9 @@ const UseGoogleSearch = () => {
         getResults();
     }, [input]);
     return (
-        <div>
-            {data && (
-                <pre>{JSON.stringify(data, null, 2)}</pre>
+        <div>   
+            {result && (
+                <pre>{JSON.stringify(result, null, 2)}</pre>
             )}
         </div>
     )

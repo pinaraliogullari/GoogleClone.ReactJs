@@ -10,8 +10,9 @@ import { AppContext } from './Context/AppContext.js';
 function App() {
 
   const [input, setInput] = useState("");
+  const [result, setResult] = useState(null);
   return (
-    <AppContext.Provider value={{ input, setInput }}>
+    <AppContext.Provider value={{ input, setInput,result,setResult }}>
       <div className="App">
         <Router>
           <Routes>

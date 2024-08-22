@@ -17,6 +17,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const SearchPage = () => {
     const context = useContext(AppContext);
+    // const { result } = useContext(AppContext);
     const responseData = response;
     return (
         <div className='searchPage'>
@@ -67,8 +68,21 @@ const SearchPage = () => {
 
             <div className='searchPage-results'>
                 <p className='searchPage-resultCount'>
-                    About {responseData?.searchInformation.formattedTotalResults} results ({responseData?.searchInformation.formattedSearchTime} seconds) for Tesla
+                    About {responseData?.searchInformation.formattedTotalResults} results ({responseData?.searchInformation.formattedSearchTime} seconds) for {context.input}
                 </p>
+                {responseData?.items.map(item => (
+                    <div className='searchPage-result' key={item.cacheId}>
+                        <a href={item.link}>
+                            {item.displayLink}
+                        </a>
+                        <a className='searchPage-resultTitle' href={item.link}>
+                            <h2>{item.title}</h2>
+                        </a>
+                        <p className='searchPage-resultSnippet'>
+                            {item.snippet}
+                        </p>
+                    </div>
+                ))}
             </div>
         </div>
     )

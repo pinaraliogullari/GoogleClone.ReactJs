@@ -43,3 +43,28 @@
 .searchPage-option a{
     margin-left:5px;
 }
+.searchPage-results{
+    margin-width:650px;
+    margin-top:20px;
+    margin-left:240px;
+    margin-bottom:100px;
+}
+.searchPage-result{
+    margin:40px 0;
+}
+.searchPage-resultCount{
+    color:#70757a;
+    font-size:14px;
+}
+.searchPage-resultTitle{
+    text-decoration:none;
+}
+.searchPage-resultTitle :hover{
+    text-decoration:underline;
+}
+.searchPage-resultTitle >h2{
+    font-weight:500;
+}
+.searchPage-resultSnippet{
+    margin-top:10px;
+}
